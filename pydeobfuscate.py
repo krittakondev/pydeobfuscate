@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import base64, codecs, os, sys
 
 print("pydeobfuscate by Noxturnix")
