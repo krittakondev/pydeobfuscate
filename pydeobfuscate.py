@@ -1,4 +1,4 @@
-import base64, codecs, os, sys
+import base64, codecs, sys
 
 print("pydeobfuscate by Noxturnix")
 print("Source code available at https://github.com/Noxturnix/pydeobfuscate")
