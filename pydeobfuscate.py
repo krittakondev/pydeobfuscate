@@ -19,7 +19,7 @@ if len(sys.argv) == 3:
 		code = code[:-1]
 		code = "\n".join(code)
 		breakLoop = False
-		if all([obfsKeyword in code for obfsKeyword in ["magic", "love", "god", "destiny", "joy", "trust", "eval"]]):
+		if all([obfsKeyword in code for obfsKeyword in ["magic", "love", "god", "destiny", "joy", "trust", "eval", "compile"]]) and code.split("\n", 1)[0].strip() == "import base64, codecs":
 			eval(compile(code,'<string>','exec'))
 		else:
 			breakLoop = True
