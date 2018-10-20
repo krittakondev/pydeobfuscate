@@ -19,17 +19,17 @@ if len(sys.argv) == 3:
 		code = code[:-1]
 		code = "\n".join(code)
 		breakLoop = False
-		if all([obfsKeyword in code for obfsKeyword in ["magic", "love", "god", "destiny", "joy", "trust", "eval", "compile"]]) and code.split("\n", 1)[0].strip() == "import base64, codecs":
+		if all([obfsKeyword in code for obfsKeyword in ["magic", "love", "god", "destiny", "joy", "trust", "eval"]]) and code.split("\n", 1)[0].strip() == "import base64, codecs":
 			eval(compile(code,'<string>','exec'))
 		else:
 			breakLoop = True
-		
+
 		solvedCode = base64.b64decode(trust).decode("utf-8")
 		if breakLoop:
 			open(outputLocation, "w", encoding="utf-8").write(solvedCode)
 			break
 
-	print("\033[1;32mFile deobfuscated.\033[0m")	
+	print("\033[1;32mFile deobfuscated.\033[0m")
 else:
 	pyname = sys.argv[0]
 	print("Usage: %s [source] [output]" % (pyname))
